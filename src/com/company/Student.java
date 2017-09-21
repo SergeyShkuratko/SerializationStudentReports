@@ -1,6 +1,7 @@
 package com.company;
 
-import java.io.Serializable;
+import java.io.*;
+import java.lang.reflect.Field;
 
 public class Student implements Serializable {
     private final short num;
@@ -85,4 +86,52 @@ public class Student implements Serializable {
                 ", familyName='" + familyName + '\'' +
                 '}';
     }
+
+    private void writeObject(ObjectOutputStream stream)
+            throws IOException {
+
+        stream.writeShort(num);
+        stream.writeLong(birthday);
+        stream.writeObject(firstName);
+        stream.writeObject(secondName);
+        stream.writeObject(familyName);
+        stream.writeObject(group);
+    }
+
+    private void readObject(ObjectInputStream stream)
+            throws IOException, ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
+        Class<?> myClass = this.getClass();
+
+        Field field = myClass.getDeclaredField("num");
+        boolean wasAccessible = field.isAccessible();
+        field.setAccessible(true);
+        field.setShort(this, stream.readShort());
+        field.setAccessible(wasAccessible);
+
+        field = myClass.getDeclaredField("birthday");
+        wasAccessible = field.isAccessible();
+        field.setAccessible(true);
+        field.setLong(this, stream.readLong());
+        field.setAccessible(wasAccessible);
+
+        firstName = (String) stream.readObject();
+        secondName = (String) stream.readObject();
+        familyName = (String) stream.readObject();
+        group = (Group) stream.readObject();
+    }
+
+
+//    @Override
+//    public void writeExternal(ObjectOutput out) throws IOException {
+//        out.flush();
+////        if(num == 3)
+////        {
+////            out.flush();
+////        }
+//    }
+//
+//    @Override
+//    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+//
+//    }
 }

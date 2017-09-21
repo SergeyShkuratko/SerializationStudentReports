@@ -26,6 +26,8 @@ public class StudentAttendance implements Attendance {
     public void print() {
         System.out.println("********************************************************************");
         System.out.println("STUDENT INFO: ");
+        System.out.println("Student id: " + student.getNum());
+        System.out.println("Student bd in long: " + student.getBirthday());
         System.out.println("Name: " + student.getSecondName() + " " + student.getFirstName());
         System.out.println("Attendances: ");
         attendances.forEach(attendance -> {

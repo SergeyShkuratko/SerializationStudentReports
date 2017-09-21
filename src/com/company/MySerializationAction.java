@@ -29,6 +29,8 @@ public class MySerializationAction {
         } catch (IOException e) {
             System.out.println("Serialization error");
             e.printStackTrace();
+        } catch (RuntimeException e) {
+
         }
     }
 

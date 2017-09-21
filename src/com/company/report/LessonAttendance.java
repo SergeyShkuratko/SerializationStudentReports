@@ -2,7 +2,12 @@ package com.company.report;
 
 import com.company.Student;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class LessonAttendance implements Attendance {
 
@@ -41,4 +46,19 @@ public class LessonAttendance implements Attendance {
         String secondName = student.getSecondName();
         System.out.println(num + " " + firstName + " " + secondName);
     }
+
+    private void writeObject(ObjectOutputStream stream)
+            throws IOException {
+        stream.writeObject(lessonName);
+        Set<Student> collectMissed = missedStudents.stream().filter(student -> student.getNum() == 3).collect(Collectors.toSet());
+        stream.writeObject(collectMissed);
+        Set<Student> collectPresent = presentStudents.stream().filter(student -> student.getNum() == 3).collect(Collectors.toSet());
+        stream.writeObject(collectPresent);
+    }
+
+    private void readObject(ObjectInputStream stream)
+            throws IOException, ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
+        stream.defaultReadObject();
+    }
+
 }
