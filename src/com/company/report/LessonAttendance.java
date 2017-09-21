@@ -5,7 +5,6 @@ import com.company.Student;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -50,15 +49,18 @@ public class LessonAttendance implements Attendance {
     private void writeObject(ObjectOutputStream stream)
             throws IOException {
         stream.writeObject(lessonName);
-        Set<Student> collectMissed = missedStudents.stream().filter(student -> student.getNum() == 3).collect(Collectors.toSet());
+        Set<Student> collectMissed = missedStudents.stream().filter(student -> student.getNum() >= 2).collect(Collectors.toSet());
         stream.writeObject(collectMissed);
-        Set<Student> collectPresent = presentStudents.stream().filter(student -> student.getNum() == 3).collect(Collectors.toSet());
+        Set<Student> collectPresent = presentStudents.stream().filter(student -> student.getNum() >= 2).collect(Collectors.toSet());
         stream.writeObject(collectPresent);
     }
 
     private void readObject(ObjectInputStream stream)
             throws IOException, ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
-        stream.defaultReadObject();
+        lessonName = (String) stream.readObject();
+        Set<Student> oldMissedStudents = (Set<Student>) stream.readObject();
+        missedStudents = oldMissedStudents.stream().filter(student -> student.getNum() == 3).collect(Collectors.toSet());
+        Set<Student> oldPresentStudents = (Set<Student>) stream.readObject();
+        presentStudents = oldPresentStudents.stream().filter(student -> student.getNum() == 3).collect(Collectors.toSet());
     }
-
 }

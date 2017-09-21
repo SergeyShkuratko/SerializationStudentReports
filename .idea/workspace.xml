@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="175231ae-d852-47ed-aedd-839cbb513ab1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SerializationInClassRoom/com/company/MySerializationAction.class" afterPath="$PROJECT_DIR$/out/production/SerializationInClassRoom/com/company/MySerializationAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SerializationInClassRoom/com/company/Student.class" afterPath="$PROJECT_DIR$/out/production/SerializationInClassRoom/com/company/Student.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SerializationInClassRoom/com/company/report/LessonAttendance.class" afterPath="$PROJECT_DIR$/out/production/SerializationInClassRoom/com/company/report/LessonAttendance.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SerializationInClassRoom/com/company/report/StudentAttendance$Attendance.class" afterPath="$PROJECT_DIR$/out/production/SerializationInClassRoom/com/company/report/StudentAttendance$Attendance.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SerializationInClassRoom/com/company/report/StudentAttendance.class" afterPath="$PROJECT_DIR$/out/production/SerializationInClassRoom/com/company/report/StudentAttendance.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/journal_gr.txt" afterPath="$PROJECT_DIR$/journal_gr.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/journal_les.txt" afterPath="$PROJECT_DIR$/journal_les.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/journal_stud.txt" afterPath="$PROJECT_DIR$/journal_stud.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/MySerializationAction.java" afterPath="$PROJECT_DIR$/src/com/company/MySerializationAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Student.java" afterPath="$PROJECT_DIR$/src/com/company/Student.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/report/LessonAttendance.java" afterPath="$PROJECT_DIR$/src/com/company/report/LessonAttendance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/report/StudentAttendance.java" afterPath="$PROJECT_DIR$/src/com/company/report/StudentAttendance.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -121,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/report/LessonAttendance.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
-              <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+              <caret line="64" column="5" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -476,7 +477,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1505974685764</updated>
-      <workItem from="1505974691154" duration="34416000" />
+      <workItem from="1505974691154" duration="34931000" />
     </task>
     <task id="LOCAL-00001" summary="many fixes">
       <created>1506011878696</created>
@@ -485,11 +486,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506011878696</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="additional task :3">
+      <created>1506020125546</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1506020125546</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34416000" />
+    <option name="totallyTimeSpent" value="34931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -563,7 +571,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="many fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="many fixes" />
+    <MESSAGE value="additional task :3" />
+    <option name="LAST_COMMIT_MESSAGE" value="additional task :3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -850,7 +859,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/report/LessonAttendance.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+          <caret line="64" column="5" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
